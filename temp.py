@@ -5,7 +5,7 @@ summ = ""
 f = open('text1.txt', 'r')
 g = open('chapterwise.txt','w')
 
-word = [' and ',' or ',' goes ',' her ',' him ',' he ',' she ',' the ',' from ',' a ' ,' an ','SHOT',"MOVING","BEDROOM","EXT"]
+word = [' and ',' or ',' goes ',' her ',' him ',' he ',' she ',' the ',' from ',' a ' ,' an ','SHOT',"MOVING","BEDROOM","EXT","'"]
 
 chapterList = [str(i) for i in range(0,303)]
 
@@ -30,7 +30,6 @@ for line in f:
 
     line = line.replace('"",',"")
     g.write(line)
-    g.write("\n")
 g.close()
 f.close()
 
@@ -56,7 +55,6 @@ for line in f:
     line = line.replace('"",',"")
     line = line.replace('.'," ")
     g.write(line)
-    g.write("\n")
 g.close()
 f.close()
 
@@ -80,6 +78,5 @@ for line in f:
     line = line.replace('"",',"")
     line = line.replace('.'," ")
     g.write(line)
-    g.write("\n")
 g.close()
 f.close()
