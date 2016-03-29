@@ -59,3 +59,27 @@ for line in f:
     g.write("\n")
 g.close()
 f.close()
+
+
+
+f = open('tweets.txt', 'r')
+g = open('tweetwise.txt','w')
+
+
+for line in f:
+    line = line.replace('.'," ")
+    line = line.rstrip('\n')
+    line = line + " "
+    for i in word:
+        if i in line:
+           line = line.replace(i," ")
+    for i in charList:
+        if i in line:
+           line = line.replace(i,'",\n\n"' )
+
+    line = line.replace('"",',"")
+    line = line.replace('.'," ")
+    g.write(line)
+    g.write("\n")
+g.close()
+f.close()
